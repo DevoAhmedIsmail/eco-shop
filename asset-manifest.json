@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.11760eeb.css",
-    "main.js": "/static/js/main.8f9da1fd.js",
+    "main.js": "/static/js/main.7fa99ad8.js",
     "static/media/404-error.png": "/static/media/404-error.23ef64499377fdde7baf.png",
     "static/media/laptop.PNG": "/static/media/laptop.86c89ca8c6ab7785ad76.PNG",
     "static/media/visa-masterCard.png": "/static/media/visa-masterCard.c06cfde8e2509f8c9de9.png",
     "index.html": "/index.html",
     "main.11760eeb.css.map": "/static/css/main.11760eeb.css.map",
-    "main.8f9da1fd.js.map": "/static/js/main.8f9da1fd.js.map"
+    "main.7fa99ad8.js.map": "/static/js/main.7fa99ad8.js.map"
   },
   "entrypoints": [
     "static/css/main.11760eeb.css",
-    "static/js/main.8f9da1fd.js"
+    "static/js/main.7fa99ad8.js"
   ]
 }
