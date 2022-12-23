@@ -1,0 +1,23 @@
+.dashboard nav {
+    background-color: #fff;
+    box-shadow: 0px 3px 8px #d1d1d1;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.dashboard .sidebar-btn {
+    display: none;
+    font-size: 1.5rem;   
+    cursor: pointer;
+}
+
+@media (max-width: 1160px) {
+    .dashboard .sidebar-btn {
+        display: block;
+    }
+}

@@ -1,0 +1,39 @@
+.payment form {
+    background-color: #fff;
+    padding: 1.5rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: -2px 10px 12px #dbdbdb;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment form input {
+    width: 100%;
+    padding: 8px 8px;
+    margin-bottom: 20px;
+    /* border-radius: 10px; */
+}
+
+.payment form input::placeholder {
+    color: #aaa;
+}
+
+.payment form .card-data-container {
+    justify-content: space-between;
+}
+
+.payment form .card-data-container input:not(:last-child) {
+    margin-right: 20px;
+}
+
+.payment .payment-btns button {
+    background-color: var(--blueColor);
+    color: #fff;
+    border: none;
+    padding: 10px 10px ;
+    border-radius: 10px;
+}
+
+.payment .payment-btns button:not(:last-child) {
+    margin-right: 10px;
+}

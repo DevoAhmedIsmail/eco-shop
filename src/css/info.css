@@ -1,0 +1,31 @@
+.dashboard-info {
+  padding: 10px 0;
+}
+
+.info-content .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.info-item_id {
+  /* flex: 1; */
+  width: 10%;
+}
+
+.info-item_title {
+  /* flex: 1; */
+  width: 40%;
+}
+
+.info-content .info-item img {
+  width: 70px;
+  object-fit: contain;
+}
+
+.info-item_price {
+  /* flex: 1; */
+  width: 10%;
+}

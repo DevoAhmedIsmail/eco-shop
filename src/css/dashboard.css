@@ -1,0 +1,21 @@
+.pieChart,
+.line-chart,
+.doughnut-chart {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -3px 5px 8px 1px #eee
+}
+
+
+
+
+.pieChart,
+.line-chart,
+.doughnut-chart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
