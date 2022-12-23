@@ -3,8 +3,8 @@ import axios from "axios";
 // import Swal from "sweetalert2";
 
 // API
-const API_Products_URL = "http://localhost:3005/products";
-// const API_Products_URL = "https://fakestoreapi.com/products";
+// const API_Products_URL = "http://localhost:3005/products";
+const API_Products_URL = "https://fakestoreapi.com/products";
 
 const initialState = {
   products: [],
@@ -32,8 +32,8 @@ export const editPostById = createAsyncThunk(
   async (DATA, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
-      console.log(`http://localhost:3005/products/${DATA.id}`);
-      await fetch(`http://localhost:3005/products/${DATA.id}`, {
+      // console.log(`http://localhost:3005/products/${DATA.id}`);
+      await fetch(`${API_Products_URL}/${DATA.id}`, {
         method: "PUT",
         body: JSON.stringify(DATA),
         headers: {'Content-Type': 'application/json'},

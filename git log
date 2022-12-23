@@ -1,0 +1,11 @@
+[33mcommit 600a6bd5bf10ba68f1b38d7381d52b672233243b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Ahmed ismail <devo.ahmedismail@gmail.com>
+Date:   Fri Dec 23 20:56:19 2022 +0200
+
+    setup gh-pages to deploy
+
+[33mcommit af9dee85dadd3c6c5eb6f83fdd8bb249ae992805[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ahmed ismail <devo.ahmedismail@gmail.com>
+Date:   Fri Dec 23 20:36:06 2022 +0200
+
+    Eco-shop with v-1.40

@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice, current } from "@reduxjs/toolkit";
 
+const apiURL = "http://localhost:3005/users";
+
 const initialState = {
   users: [],
   user: {},
@@ -12,7 +14,7 @@ export const getUserFromApi = createAsyncThunk(
   async (_, thunAPI) => {
     const { rejectWithValue } = thunAPI;
     try {
-      const res = await fetch("http://localhost:3005/users");
+      const res = await fetch(apiURL);
       const data = await res.json();
       return data;
     } catch (error) {
