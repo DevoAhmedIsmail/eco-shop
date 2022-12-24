@@ -34,7 +34,6 @@ function Order() {
   };
 
 
-  // console.log(userOrderInfo);
 
   return (
     <section className="order">

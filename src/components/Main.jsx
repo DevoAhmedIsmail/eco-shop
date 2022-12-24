@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getAllProducts } from "../store/productsSlice";
+import React from "react";
+import { useSelector } from "react-redux";
 import Card from "./Card";
 import CartIcon from "./CartIcon";
 import LoadingSpinner from "./LoadingSpinner";
@@ -32,15 +31,6 @@ function Main() {
       <CartIcon />
       <div className="container">
         <hr />
-        {/* Best Phone section */}
-        {/* <section className="best-phones py-5">
-          <h1 className="mb-3 main-heading">Best Selling Smart Phones</h1>
-          <div className="slider-wrapper mt-3">
-            {<Slider cate={'electronics'} />}
-          </div>
-        </section> */}
-        {/* End Phone section */}
-
         {/* Products items section which display all product with details */}
         <section className="products-items py-5">
           <h1 className="main-heading">Discover a new items</h1>

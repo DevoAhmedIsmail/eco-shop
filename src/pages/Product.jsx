@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getAllProducts, getProductById } from "../store/productsSlice";
 import { getAllProductsByCategory } from "../store/productsSlice";
 import { addToCart } from "../store/cartSlice";
 import CartIcon from "../components/CartIcon";
@@ -14,7 +13,7 @@ function Product() {
   const [productsByCategory, setProductsByCategory] = useState({});
   const { productId } = useParams();
   const dispatch = useDispatch();
-  const { products, relateProducts } = useSelector((state) => state.products);
+  const { products } = useSelector((state) => state.products);
 
   const addToCartHandler = (id) => {
     const product = products.find((el) => el.id === id);
@@ -31,7 +30,7 @@ function Product() {
     }
 
     dispatch(getAllProductsByCategory(product.category));
-  }, [dispatch, products,productId]);
+  }, [dispatch, products,productId,product.category]);
 
   const allRelated = productsByCategory.length ? productsByCategory.filter((el) => el.id !== product.id) : [];
 

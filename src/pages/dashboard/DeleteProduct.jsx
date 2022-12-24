@@ -1,5 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Error from "../../components/dashboard/Error";
+import Message from "../../components/dashboard/Message";
 import { deletePost } from "../../store/dashboardSlice";
 import { getAllProducts } from "../../store/productsSlice";
 
@@ -13,22 +15,20 @@ const DeleteProduct = () => {
   const { products } = useSelector((state) => state.products);
 
   const changeHandler = (id) => {
-    setMessage('')
+    setMessage("");
     setID(id);
     const PRODUCT = products.filter((el) => el.id == id);
     setProduct(PRODUCT[0]);
-    console.log(PRODUCT, ID);
   };
 
   const handleDelete = (e) => {
     e.preventDefault();
     dispatch(deletePost(ID)).then(() => {
-      dispatch(getAllProducts())
+      dispatch(getAllProducts());
       setMessage(`${product.title} has been deleted`);
       setID("");
-      setProduct('')
+      setProduct("");
     });
-    // console.log("After Clicked :", ID);
   };
 
   return (
@@ -46,7 +46,11 @@ const DeleteProduct = () => {
         </div>
         {product && (
           <div className="d-flex align-items-center">
-            <img src={product.image} alt={product.title} style={{width: '50px', objectFit: 'cover'}} />
+            <img
+              src={product.image}
+              alt={product.title}
+              style={{ width: "50px", objectFit: "cover" }}
+            />
             <p className="ms-3">{product.title}</p>
           </div>
         )}
@@ -59,50 +63,12 @@ const DeleteProduct = () => {
           Delete Product
         </button>
       </form>
-      
+
       {/* Message */}
-      {message && (
-        <div
-          className="toast align-items-center text-white bg-primary position-fixed bottom-0 mb-3 end-0 border-0 show"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-        >
-          <div className="d-flex">
-            <div className="toast-body">
-             {message}
-            </div>
-            <button
-              type="button"
-              className="btn-close btn-close-white me-2 m-auto"
-              data-bs-dismiss="toast"
-              aria-label="Close"
-            ></button>
-          </div>
-        </div>
-      )}
+      {message && <Message text={message} />}
       {/* End Message */}
       {/* Error */}
-      {error && (
-        <div
-          className="toast align-items-center text-white bg-primary position-fixed bottom-0 mb-3 end-0 border-0 show"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-        >
-          <div className="d-flex">
-            <div className="toast-body">
-              Hello, world! This is a toast message.
-            </div>
-            <button
-              type="button"
-              className="btn-close btn-close-white me-2 m-auto"
-              data-bs-dismiss="toast"
-              aria-label="Close"
-            ></button>
-          </div>
-        </div>
-      )}
+      {error && <Error text={error} />}
       {/* Error */}
     </div>
   );

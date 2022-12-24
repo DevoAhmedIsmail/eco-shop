@@ -1,90 +1,89 @@
-
 /* Footer */
 footer {
-    color: #fff;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  padding: 5px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+footer .footer__subscribe button {
+  background-color: #6b6969;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 8px;
+  border: none;
+  outline: none;
+  border-radius: 0 10px 10px 0;
+  transition: 0.3s;
+}
+
+footer .footer__subscribe button:hover {
+  background-color: #474646;
+}
+
+footer .footer__subscribe input {
+  padding: 5px 3px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  border-color: #6b6969;
+}
+
+footer .footer__subscribe input:focus,
+footer .footer__subscribe input:active {
+  outline: none;
+}
+
+footer .copyright {
+  position: relative;
+}
+
+footer .copyright::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #bfbfbf;
+  bottom: 2rem;
+  border-radius: 10px;
+}
+
+footer .copyright .copyright-container {
+  z-index: 88;
+  background-color: var(--blueColor);
+  padding: 0 60px;
+}
+
+footer .copyright .developer {
+  font-size: bold;
+  color: tomato;
+}
+
+footer .copyright .copyright-container i {
+  margin-right: 17px;
+  font-size: 1rem;
+}
+
+@media (max-width: 555px) {
+  footer .copyright-container p {
+    font-size: 0.8rem;
   }
-  
-  footer ul {
-    list-style: none;
-  }
-  
-  footer ul li {
-    padding: 5px 0;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  
-  footer a:hover {
-    color: #000;
-  }
-  
-  footer .footer__subscribe button {
-    background-color: #6b6969;
-    color: #fff;
-    display: inline-block;
-    padding: 8px 8px;
-    border: none;
-    outline: none;
-    border-radius: 0 10px 10px 0;
-    transition: 0.3s;
-  }
-  
-  footer .footer__subscribe button:hover {
-    background-color: #474646;
-  }
-  
-  footer .footer__subscribe input {
-    padding: 5px 3px;
-    border-radius: 10px 0 0 10px;
-    border: none;
-    border-color: #6b6969;
-  }
-  
-  footer .footer__subscribe input:focus,
-  footer .footer__subscribe input:active {
-    outline: none;
-  }
-  
-  footer .copyright {
-    position: relative;
-  }
-  
-  footer .copyright::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #bfbfbf;
-    bottom: 2rem;
-    border-radius: 10px;
-  }
-  
-  footer .copyright .copyright-container {
-    z-index: 88;
-    background-color: var(--blueColor); 
-    padding: 0 60px;
-  }
-  
-  footer .copyright .developer {
-    font-size: bold;
-    color: tomato;
-  }
-  
-  footer .copyright .copyright-container i {
-    margin-right: 17px;
-    font-size: 1rem;
-  }
-  
-  @media (max-width: 555px) {
-    footer .copyright-container p {
-      font-size: 0.8rem;
-    }
-  }
-  
+}
+
 @media (max-width: 570px) {
   footer .footer-menu ul {
     display: flex;
@@ -92,7 +91,16 @@ footer {
     flex-direction: row;
     padding: 0;
     padding-right: 20px;
-}
+  }
+
+  footer .footer-menu ul li a{
+    font-size: 12px;
+  }
+  .copyright-container  {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-  /* End Footer */
+/* End Footer */

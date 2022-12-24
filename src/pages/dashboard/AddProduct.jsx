@@ -89,9 +89,6 @@ const AddProduct = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
-        {/* {
-          uploadPhoto && <img src={URL.createObjectURL(uploadPhoto)} alt="not found" />
-        } */}
         <button className="form-btn" type="submit" disabled={isLoading}>
           {isLoading ? (
             <i className="fa-solid fa-spinner fa-spin-pulse"></i>

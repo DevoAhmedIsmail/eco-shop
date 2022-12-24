@@ -21,7 +21,7 @@ function Header() {
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="header__right">
-                <img src={laptop} />
+                <img src={laptop} alt="laptop" />
             </div>
           </div>
         </div>

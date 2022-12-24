@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  editPost,
-  editPostById,
-  getAllProducts,
-} from "../../store/productsSlice";
+import Message from "../../components/dashboard/Message";
+import { editPostById, getAllProducts } from "../../store/productsSlice";
 
 const EditProduct = () => {
   const [ID, setID] = useState("");
@@ -14,8 +11,7 @@ const EditProduct = () => {
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
   const [showForm, setShowForm] = useState(false);
-  const [message,setMessage] = useState("");
-
+  const [message, setMessage] = useState("");
 
   const dispatch = useDispatch();
   const { products, isProductsLoading } = useSelector(
@@ -24,7 +20,7 @@ const EditProduct = () => {
   let PRODUCT = {};
 
   const searchHandleChange = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     PRODUCT = products.find((el) => el.id == ID);
     setTitle(PRODUCT.title);
     setDescription(PRODUCT.description);
@@ -32,12 +28,11 @@ const EditProduct = () => {
     setCategory(PRODUCT.category);
     setImage(PRODUCT.image);
     setShowForm(true);
-    setMessage('')
+    setMessage("");
   };
 
   const editFormHandler = (e) => {
     e.preventDefault();
-    // dispatch(editPost({id: ID, title: title, description: description, category: category, price: price}));
     dispatch(
       editPostById({ id: ID, title, description, category, price, image })
     ).then(() => {
@@ -138,26 +133,7 @@ const EditProduct = () => {
       )}
 
       {/* Message */}
-      {message && (
-        <div
-          className="toast align-items-center text-white bg-primary position-fixed bottom-0 mb-3 end-0 border-0 show"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-        >
-          <div className="d-flex">
-            <div className="toast-body">
-             {message}
-            </div>
-            <button
-              type="button"
-              className="btn-close btn-close-white me-2 m-auto"
-              data-bs-dismiss="toast"
-              aria-label="Close"
-            ></button>
-          </div>
-        </div>
-      )}
+      {message && <Message text={message} />}
       {/* End Message */}
     </section>
   );

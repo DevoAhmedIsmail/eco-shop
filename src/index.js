@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./css/index.css";
-import { createBrowserRouter, HashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 
 // CSS AND BOOTSTRAP STYLES
@@ -28,8 +28,8 @@ import CartRootLatout from "./pages/CartRootLatout";
 import ErrorPage from "./pages/ErrorPage";
 import DashboardRootLayout from "./pages/dashboard/DashboardRootLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
-import AddProduct from "./pages/dashboard/AddProduct";
-import EditProduct from "./pages/dashboard/EditProduct";
+import AddProduct from './pages/dashboard/AddProduct'
+import EditProduct from './pages/dashboard/EditProduct'
 import Info from "./pages/dashboard/Info";
 import Waiting from "./pages/dashboard/Waiting";
 import Shipping from "./pages/dashboard/Shipping";
@@ -82,9 +82,9 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "user/login",
-        element: <Login />,
-      },
+        path: 'user/login',
+        element: <Login />
+      }
     ],
   },
   {
@@ -96,46 +96,41 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "add-product",
-        element: <AddProduct />,
+        path: 'add-product',
+        element: <AddProduct />
       },
       {
-        path: "edit-product",
-        element: <EditProduct />,
-      },
+        path: 'edit-product',
+        element: <EditProduct />
+      }
+      ,
       {
-        path: "delete-product",
-        element: <DeleteProduct />,
+        path: 'delete-product',
+        element: <DeleteProduct />
       },
       {
         path: "info",
         element: <Info />,
       },
       {
-        path: "waiting",
+        path: 'waiting',
         element: <Waiting />,
       },
       {
-        path: "shipping",
+        path: 'shipping',
         element: <Shipping />,
       },
       {
-        path: "completed",
-        element: <Completed />,
-      },
-      // {
-      //   path: 'edit-product/:productID/update',
-      //   element:
-      // }
+        path: 'completed',
+        element: <Completed />
+      }
     ],
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Provider store={store}>
-    <HashRouter>
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </HashRouter>
-  </Provider>
+    </Provider>
 );

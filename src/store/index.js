@@ -11,6 +11,10 @@ const store = configureStore({
     dashboard,
     auth
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    immutableCheck: { warnAfter: 128 },
+    serializableCheck: { warnAfter: 128 },
+  })
 });
 
 export default store;

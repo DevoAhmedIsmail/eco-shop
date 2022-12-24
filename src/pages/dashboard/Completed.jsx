@@ -4,10 +4,8 @@ import { changeOrderStatus, getOrders } from "../../store/dashboardSlice";
 import "../../css/waiting.css";
 
 const Completed = () => {
-   // const [] = useState([])
    const { orders, isLoading } = useSelector((state) => state.dashboard);
 
-   // orders :=>  [{id,cart:{}, shippingInformation: {}},{id,cart:{}, shippingInformation: {}}]
  
    const changeHandlerStatus = ({ status, order, item }) => {
      let newCart = [];

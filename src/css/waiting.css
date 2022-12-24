@@ -21,6 +21,9 @@
     overflow: auto;
   }
 
+  .dashboard-waiting .table-wrapper table {
+    width: 100%;
+  }
   
 @media (max-width: 820px) {
     .dashboard-waiting table .table-actions  {
@@ -28,9 +31,10 @@
     }
 
     .dashboard-waiting .table-wrapper {
-        width: 100%;
+        max-width: 600px;
+      min-width: 500px;
         height: 500px;
-
+        overflow: auto;
       }
     
     

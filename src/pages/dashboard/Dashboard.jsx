@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie, Line, Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 import "../../css/dashboard.css";
 import AnimatedNumbers from "react-animated-numbers";
+import NumberAnimation from "../../components/dashboard/NumberAnimation";
 
 const Dashboard = () => {
   const {
@@ -97,22 +97,9 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 mt-3 ">
             {/* Card */}
             <div className="dashboard-card orange-card">
-              <p className="dashboard-card__title">
-                
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={totalEarning}
-                  fontStyle={{ fontSize: 30 }}
-                  configs={[
-                    { mass: 1, tension: 220, friction: 100 },
-                    { mass: 1, tension: 180, friction: 130 },
-                    { mass: 1, tension: 280, friction: 90 },
-                    { mass: 1, tension: 180, friction: 135 },
-                    { mass: 1, tension: 260, friction: 100 },
-                    { mass: 1, tension: 210, friction: 180 },
-                  ]}
-                ></AnimatedNumbers>
-              </p>
+              <div className="dashboard-card__title">
+                <NumberAnimation num={totalEarning} />
+              </div>
               <div className="dashboard-card__body">
                 <p>All Earning</p>
                 <p>
@@ -129,21 +116,9 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 mt-3">
             {/* Card */}
             <div className="dashboard-card blue-card">
-              <p className="dashboard-card__title">
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={shippingNow}
-                  fontStyle={{ fontSize: 30 }}
-                  configs={[
-                    { mass: 1, tension: 220, friction: 100 },
-                    { mass: 1, tension: 180, friction: 130 },
-                    { mass: 1, tension: 280, friction: 90 },
-                    { mass: 1, tension: 180, friction: 135 },
-                    { mass: 1, tension: 260, friction: 100 },
-                    { mass: 1, tension: 210, friction: 180 },
-                  ]}
-                ></AnimatedNumbers>
-              </p>
+              <div className="dashboard-card__title">
+              <NumberAnimation num={shippingNow} />
+              </div>
               <div className="dashboard-card__body">
                 <p>Shipping Order</p>
                 <p>
@@ -160,21 +135,10 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 mt-3 ">
             {/* Card */}
             <div className="dashboard-card red-card ">
-              <p className="dashboard-card__title">
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={waitingOrders}
-                  fontStyle={{ fontSize: 30 }}
-                  configs={[
-                    { mass: 1, tension: 220, friction: 100 },
-                    { mass: 1, tension: 180, friction: 130 },
-                    { mass: 1, tension: 280, friction: 90 },
-                    { mass: 1, tension: 180, friction: 135 },
-                    { mass: 1, tension: 260, friction: 100 },
-                    { mass: 1, tension: 210, friction: 180 },
-                  ]}
-                ></AnimatedNumbers>
-              </p>
+              <div className="dashboard-card__title">
+                <NumberAnimation num={waitingOrders} />
+                
+              </div>
               <div className="dashboard-card__body">
                 <p>Waiting Order</p>
                 <p>
@@ -191,21 +155,9 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 mt-3">
             {/* Card */}
             <div className="dashboard-card green-card">
-              <p className="dashboard-card__title">
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={deliverdOrders}
-                  fontStyle={{ fontSize: 30 }}
-                  configs={[
-                    { mass: 1, tension: 220, friction: 100 },
-                    { mass: 1, tension: 180, friction: 130 },
-                    { mass: 1, tension: 280, friction: 90 },
-                    { mass: 1, tension: 180, friction: 135 },
-                    { mass: 1, tension: 260, friction: 100 },
-                    { mass: 1, tension: 210, friction: 180 },
-                  ]}
-                ></AnimatedNumbers>
-              </p>
+              <div className="dashboard-card__title">
+              <NumberAnimation num={deliverdOrders} />
+              </div>
               <div className="dashboard-card__body">
                 <p>Delivered Orders</p>
                 <p>

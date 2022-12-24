@@ -1,7 +1,6 @@
 import {
   createAsyncThunk,
   createSlice,
-  removeListener,
 } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -45,7 +44,6 @@ export const deletePost = createAsyncThunk(
       });
       return id;
     } catch (error) {
-      console.log(error);
       return rejectWithValue(error.message);
     }
   }
@@ -75,7 +73,6 @@ export const getOrders = createAsyncThunk(
     try {
       const res = await fetch("http://localhost:3005/orders");
       const data = await res.json();
-      // console.log(data);
       return data;
     } catch (error) {
       rejectWithValue(error.message);
@@ -108,12 +105,8 @@ const dashboardSlice = createSlice({
     // add information of shipping to the store
     setShippingInformation(state, action) {
       state.shippingInformation = action.payload;
-      // console.log(action.payload);
     },
-    // change status of order
-    changeStatus(state, action) {
-      // state.orders.filter(order=> order)
-    },
+   
   },
   extraReducers: {
     // reducer for adding a post
@@ -124,12 +117,10 @@ const dashboardSlice = createSlice({
     [addPost.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.error = null;
-      console.log(action.payload);
     },
     [addPost.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
-      console.log(action.payload);
     },
     // reducer for deleting a post
     [deletePost.pending]: (state, action) => {
@@ -143,7 +134,6 @@ const dashboardSlice = createSlice({
     [deletePost.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
-      console.log(action.payload);
     },
     // Add Order
     [addOrder.pending]: (state, action) => {
@@ -158,7 +148,6 @@ const dashboardSlice = createSlice({
     [addOrder.rejected]: (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
-      console.log(action.payload);
     },
     // Get Orders
     [getOrders.pending]: (state, action) => {
@@ -204,7 +193,6 @@ const dashboardSlice = createSlice({
     },
     [changeOrderStatus.fulfilled]: (state, action) => {
       state.isLoading = false;
-      // state.orders = action.payload;
     },
     [changeOrderStatus.rejected]: (state, action) => {
       state.isLoading = false;

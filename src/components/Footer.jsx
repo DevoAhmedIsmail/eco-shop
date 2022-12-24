@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,63 +12,63 @@ function Footer() {
                I made this site for learning, its just a fake website with fake
               data. I tried my best to code this site.
             </p>
-          </div>
+          </div> 
           <div className="col-lg-6">
             <div className="row">
               <div className="col-md-4 col-sm-6 footer-menu">
                 <ul>
                   <li>
-                    <a href="#">Company</a>
+                    <Link to="#">Company</Link>
                   </li>
                   <li>
-                    <a href="#">About Us</a>
+                    <Link to="#">About Us</Link>
                   </li>
                   <li>
-                    <a href="#">Why choose us</a>
+                    <Link to="#">Why choose us</Link>
                   </li>
                   <li>
-                    <a href="#">Pricing</a>
+                    <Link to="#">Pricing</Link>
                   </li>
                   <li>
-                    <a href="#">Testimonial</a>
+                    <Link to="#">Testimonial</Link>
                   </li>
                 </ul>
               </div>
               <div className="col-md-4 col-sm-6 footer-menu">
                 <ul>
                   <li>
-                    <a href="#">Resources</a>
+                    <Link to="#">Resources</Link>
                   </li>
                   <li>
-                    <a href="#">Privacy Policy</a>
+                    <Link to="#">Privacy Policy</Link>
                   </li>
                   <li>
-                    <a href="#">Terms and condition</a>
+                    <Link to="#">Terms and condition</Link>
                   </li>
                   <li>
-                    <a href="#">Blog</a>
+                    <Link to="#">Blog</Link>
                   </li>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <Link to="#">Contact Us</Link>
                   </li>
                 </ul>
               </div>
               <div className="col-md-4 col-sm-12 sm-d-none">
                 <ul>
                   <li>
-                    <a href="#">Product</a>
+                    <Link to="#">Product</Link>
                   </li>
                   <li>
-                    <a href="#">Project Management</a>
+                    <Link to="#">Project Management</Link>
                   </li>
                   <li>
-                    <a href="#">Time Tracker</a>
+                    <Link to="#">Time Tracker</Link>
                   </li>
                   <li>
-                    <a href="#">Time Schedule</a>
+                    <Link to="#">Time Schedule</Link>
                   </li>
                   <li>
-                    <a href="#">Lead generate</a>
+                    <Link to="#">Lead generate</Link>
                   </li>
                 </ul>
               </div>
@@ -93,16 +94,16 @@ function Footer() {
             </p>
             <ul className="d-flex">
               <li>
-                <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
+                <Link to="#"><i className="fa-brands fa-facebook-f"></i></Link>
               </li>
               <li>
-                <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                <Link to="#"><i className="fa-brands fa-twitter"></i></Link>
               </li>
               <li>
-                <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+                <Link to="#"><i className="fa-brands fa-linkedin-in"></i></Link>
               </li>
               <li>
-                <a href="#"><i className="fa-brands fa-github"></i></a>
+                <Link to="#"><i className="fa-brands fa-github"></i></Link>
               </li>
             </ul>
           </div>

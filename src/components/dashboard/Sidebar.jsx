@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./css/sidebar.css";
 
-const Sidebar = ({ toggleSidebar, showSideBar }) => {
+const Sidebar = ({ toggleSidebar, showSideBar,closeSideBar,openSideBar }) => {
+  const boxRef = useRef(null);
+  // const boxOutsideClick = OutsideClick(boxRef);
+  const [isClicked, setIsClicked] = useState();
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (boxRef.current && !boxRef.current.contains(event.target)) {
+        closeSideBar();
+      } else {
+        openSideBar()
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [boxRef]);
   return (
-    <div className={`dashboard-sidebar ${showSideBar && "active"}`}>
+    <div
+      ref={boxRef}
+      className={`dashboard-sidebar ${showSideBar && "active"}`}
+    >
       <i className="fa-solid fa-xmark close-btn" onClick={toggleSidebar}></i>
       <div className="logo-title" to="/">
         <span>Eco</span>-Shop
@@ -103,7 +123,6 @@ const Sidebar = ({ toggleSidebar, showSideBar }) => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );

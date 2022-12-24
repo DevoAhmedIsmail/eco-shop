@@ -3,12 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeOrderStatus, getOrders } from "../../store/dashboardSlice";
 import "../../css/waiting.css";
 
-
 const Shipping = () => {
-  // const [] = useState([])
   const { orders, isLoading } = useSelector((state) => state.dashboard);
-
-  // orders :=>  [{id,cart:{}, shippingInformation: {}},{id,cart:{}, shippingInformation: {}}]
 
   const changeHandlerStatus = ({ status, order, item }) => {
     let newCart = [];
@@ -53,8 +49,12 @@ const Shipping = () => {
                 <div className="table-actions">
                   <button
                     className="btn btn-success"
-                    onClick={() =>
-                      changeHandlerStatus({ status: "delivered", order, item })
+                    onClick={(e) =>
+                      changeHandlerStatus({
+                        status: "delivered",
+                        order,
+                        item,
+                      })
                     }
                   >
                     {isLoading && (
@@ -64,8 +64,12 @@ const Shipping = () => {
                   </button>
                   <button
                     className="btn btn-warning"
-                    onClick={() =>
-                      changeHandlerStatus({ status: "waiting", order, item })
+                    onClick={(e) =>
+                      changeHandlerStatus({
+                        status: "waiting",
+                        order,
+                        item,
+                      })
                     }
                   >
                     {isLoading && (
@@ -111,4 +115,3 @@ const Shipping = () => {
 };
 
 export default Shipping;
-

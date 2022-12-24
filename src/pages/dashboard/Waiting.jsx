@@ -5,10 +5,7 @@ import { getOrders, changeOrderStatus } from "../../store/dashboardSlice";
 import "../../css/waiting.css";
 
 const Waiting = () => {
-  // const [] = useState([])
   const { orders, isLoading } = useSelector((state) => state.dashboard);
-
-  // orders :=>  [{id,cart:{}, shippingInformation: {}},{id,cart:{}, shippingInformation: {}}]
 
   const changeHandlerStatus = ({ status, order, item }) => {
     let newCart = [];
@@ -86,7 +83,7 @@ const Waiting = () => {
       <h2 className="main-heading">Products Info</h2>
 
       <div className="table-wrapper">
-        <table className="table table-hover">
+        <table className="table table-hover table-responsive">
           <thead>
             <tr>
               <th>ID</th>

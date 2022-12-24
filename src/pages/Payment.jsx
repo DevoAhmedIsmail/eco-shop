@@ -40,7 +40,6 @@ function Payment() {
 
   };
 
-  console.log(paymentInfo);
   return (
     <section className="payment py-5">
       <div className="container">

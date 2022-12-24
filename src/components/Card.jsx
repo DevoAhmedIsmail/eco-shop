@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 // fa-shake
 function Card({ product }) {
   const [isHover, setIsHover] = useState(false);
-  // const { addToCart } = useContext(ProductsContext);
 
   const { products } = useSelector((state) => state.products);
   const dispatch = useDispatch();

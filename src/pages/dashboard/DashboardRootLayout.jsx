@@ -14,6 +14,14 @@ const DashboardRootLayout = () => {
     setShowSideBar(!showSideBar);
   };
 
+  const closeSideBar = () => {
+    setShowSideBar(false);
+  }
+
+  const openSideBar = () => {
+    setShowSideBar(true);
+  }
+ 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
@@ -22,12 +30,12 @@ const DashboardRootLayout = () => {
     dispatch(getAllProducts());
     dispatch(getOrders())
 
-    // !user.isAdmin && navigate("/");
+    !user.isAdmin && navigate("/");
   }, [dispatch,user,navigate]);
 
   return (
     <section className="dashboard">
-      <Sidebar toggleSidebar={toggleSidebar} showSideBar={showSideBar} />
+      <Sidebar toggleSidebar={toggleSidebar} closeSideBar={closeSideBar} openSideBar={openSideBar} showSideBar={showSideBar} />
       <div className="dashboard-main">
         <NavDashboard
           toggleSidebar={toggleSidebar}

@@ -35,9 +35,7 @@ const authSlice = createSlice({
           el.email === action.payload.email  &&
           el.password === action.payload.password
       );
-      console.log('Email: ', action.payload.email);
-      console.log('Password: ', action.payload.password);
-        console.log(current(userLoginSuccess));
+    
 
       if (userLoginSuccess) {
         state.isUserLoading = false;
@@ -65,7 +63,6 @@ const authSlice = createSlice({
     [getUserFromApi.rejected]: (state, action) => {
       state.isUserLoading = false;
       state.errorMessage = action.payload;
-      console.log(action.payload);
     },
   },
 });
