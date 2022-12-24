@@ -12,6 +12,9 @@
 <li>React Router</li>
 </ul>
 
+> How to open the project locally
+
+
 <img width="250px" src="https://user-images.githubusercontent.com/121305912/209445871-0b281fc5-45d1-4851-92b7-5b4444facf85.PNG" alt="photo">
 <img width="250px" src="https://user-images.githubusercontent.com/121305912/209446015-b002cf15-aee6-4ce2-91c5-9e67e7fc59f8.PNG" alt="photo">
 <img width="250px" src="https://user-images.githubusercontent.com/121305912/209446204-20fc11ab-14ef-4398-bdeb-b1a0d7092e2c.PNG" alt="photo">
